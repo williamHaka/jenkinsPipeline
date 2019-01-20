@@ -18,14 +18,14 @@ pipeline {
 		    	input('Quieres continuar?')
 	    	}
 	    }
-	    stage ('SonarQube') {
-			steps{
-				sh'mvn sonar:sonar'
-            }
-		}
+	    //stage ('SonarQube') {
+		//	steps{
+		//		sh'mvn sonar:sonar'
+        //    }
+		//}
 
 	    stage ('Execute JMeter Performance Tests'){
-	     	 build job: 'jmeterFreeStyle'
+	     	 build 'jmeterFreeStyle'
 	     }
 	}
 }

@@ -17,10 +17,13 @@ pipeline {
 		    	echo 'runnig Deploy'
 		    	input('Quieres continuar?')
 	    	}
-	    	
 	    }
-	    stage ('Monitor') {
-	    	steps{echo 'runnig Monitor'}
-	    }
+	    stage ('SonarQube') {
+			sh'mvn sonar:sonar'
+		}
+
+	    stage ('Execute JMeter Performance Tests'){
+	     	 build job: 'jmeterFreeStyle'
+	     }
 	}
 }

@@ -14,6 +14,7 @@ pipeline {
 	    }
 	    stage ('Deploy') {
 	    	steps{echo 'runnig Deploy'}
+	    	input('Quieres continuar?')
 	    }
 	    stage ('Monitor') {
 	    	steps{echo 'runnig Monitor'}

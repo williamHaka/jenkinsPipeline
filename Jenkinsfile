@@ -19,7 +19,9 @@ pipeline {
 	    	}
 	    }
 	    stage ('SonarQube') {
-			sh'mvn sonar:sonar'
+			steps{
+				sh'mvn sonar:sonar'
+            }
 		}
 
 	    stage ('Execute JMeter Performance Tests'){

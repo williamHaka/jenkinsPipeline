@@ -25,7 +25,9 @@ pipeline {
 		//}
 
 	    stage ('Execute JMeter Performance Tests'){
-	     	 build 'jmeterFreeStyle'
+	    	steps{
+	     	 	build 'jmeterFreeStyle'
+     	 	}
 	     }
 	}
 }

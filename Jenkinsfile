@@ -43,9 +43,10 @@ pipeline {
 		//		sh'mvn sonar:sonar'
         //    }
 		//}
+		
 	    stage ('Execute JMeter Performance Tests'){
 	    	steps{
-	    	echo 'ejecuta prueba de carga'
+	    	echo 'ejecuta prueba Jmeter'
 	     	 	build 'jmeterFreeStyle'
      	 	}
 	     }

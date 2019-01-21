@@ -46,7 +46,7 @@ pipeline {
 		
 	    stage ('Execute JMeter Performance Tests'){
 	    	steps{
-	    	echo 'ejecuta prueba Jmeter'
+	    	echo 'ejecuta prueba de carga'
 	     	 	build 'jmeterFreeStyle'
      	 	}
 	     }

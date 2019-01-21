@@ -6,7 +6,7 @@ pipeline {
 	    stage ('Compilar') {
 	    	steps{
 		    	echo 'compilando aplicacion'
-		    	sh 'mvn compile'
+		    	bat 'mvn compile'
 		    	echo 'compilación Exitosa'
 	    	}
 	    }

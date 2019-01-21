@@ -17,7 +17,7 @@ pipeline {
 		stage ('Intalar') {
 			steps{
 				echo 'Iniciando Test'
-				bat 'mvn install'
+				//bat 'mvn install'
 			}
 		}
 	}

@@ -14,7 +14,7 @@ pipeline {
 	    	steps{
     			echo 'Ejecutando tests'
 //	    		try{
-			      sh 'mvn clean install'
+			      bat 'mvn clean install'
 //			      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 //			   }catch(err) {
 //			      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
@@ -27,7 +27,7 @@ pipeline {
 	    stage ('Instalar') {
 	    	steps{
 	    		echo 'Instala el paquete generado en el repositorio maven'
-   				sh 'mvn install -Dmaven.test.skip=true'
+   				bat 'mvn install -Dmaven.test.skip=true'
     		}
 	    }
 	    stage ('Archivar') {

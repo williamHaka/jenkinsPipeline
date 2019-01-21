@@ -14,7 +14,7 @@ pipeline {
 	    	steps{
     			echo 'Ejecutando tests'
 //	    		try{
-			      sh 'mvn verify'
+			      sh 'mvn clean install'
 //			      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 //			   }catch(err) {
 //			      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
